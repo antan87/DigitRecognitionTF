@@ -11,7 +11,6 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
 const routes = require('./routes/index')(io);
-const tensorflow = require('./routes/tensorflow');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,23 +20,13 @@ app.set('view engine', 'pug');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static('uploads'));
 app.use('/', routes);
-app.use('/tensorflow', tensorflow);
-
-//app.use((req, res, next) => {
-//    res.header('Access-Control-Allow-Origin', '*');
-//    res.header('Access-Control-Allow-Headers', '*');
-
-//    if (req.method === 'OPTIONS') {
-//        res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
-//        return res.status(200).json({});
-//    }
-//    next();
-//});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -74,11 +63,3 @@ app.set('port', process.env.PORT || 3000);
 server.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });
-
-//const io = require('socket.io')(server);
-//io.on('connection', function (socket) {
-//    console.log('Hej');
-//    socket.emit('request', "das"); // emit an event to the socket
-//    //io.emit('broadcast'); // emit an event to all connected sockets
-//    socket.on('reply', function () { /* */ }); // listen to the event
-//});
