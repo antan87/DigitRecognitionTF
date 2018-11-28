@@ -1,0 +1,3 @@
+C:\Users\Antan87\source\repos\DigitRecognitionTF\obj\Debug\DigitRecognitionTF.njsprojAssemblyReference.cache
+C:\Users\Antan87\source\repos\DigitRecognitionTF\obj\Debug\DigitRecognitionTF.njsproj.CoreCompileInputs.cache
+C:\Users\Antan87\source\repos\DigitRecognitionTF\bin\Microsoft.NodejsTools.WebRole.dll

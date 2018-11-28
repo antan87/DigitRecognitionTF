@@ -1,0 +1,28 @@
+﻿extends layout.pug
+
+block append head
+    script(src='/javascripts/p5.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js')
+    script(src='/javascripts/index.js') 
+    
+block content
+    div(id='sketch-holder')
+    br
+    br
+    div 
+     div
+      button(type='button' id='btnPredict') Predict
+      button(type='button' id='btnTrain') Train
+      button(type='button' id='btnClean') Clean
+    div 
+     br
+    div
+     h2= "Prediction: " 
+      h3(id='prediction-txt')
+     br
+    div
+     h2= "Accuracy: " 
+      h3(id='accuracy-txt')
+    div 
+     h2= "Loss: "
+      h3(id='loss-txt')

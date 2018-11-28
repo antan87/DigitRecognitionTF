@@ -1,0 +1,31 @@
+{
+  "name": "tensor-flow-experiment",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "nodemon"
+  },
+  "description": "TensorFlowExperiment",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.13.1",
+    "@tensorflow/tfjs-node": "^0.1.18",
+    "@tensorflow/tfjs-node-gpu": "file:node_modules/@tensorflow/tfjs-node-gpu",
+    "async": "^2.6.1",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.0",
+    "cuda": "^0.1.0",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "mnist": "^1.1.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemon": "^1.18.4",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^2.1.1"
+  }
+}

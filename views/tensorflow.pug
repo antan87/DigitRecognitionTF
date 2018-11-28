@@ -1,0 +1,21 @@
+﻿extends layout.pug
+
+block append head
+    script(src='/javascripts/p5.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js')
+    script(src='/javascripts/tensorflowMnist.js') //
+
+   
+    
+block content
+    div(id='sketch-holder')
+    div 
+     h1= "Train"
+      div
+       button(type='button' onclick='cleanUp()') Start
+       button(type='button' onclick='cleanUp()') Stop
+     
+    div 
+     button(type='button' onclick='cleanUp()') Clean    
+     button(type='button' onclick='sendImageForPrediction()') Post
+
